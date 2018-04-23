@@ -21,7 +21,7 @@ class ProductResoruce extends JsonResource
             'price' => $this->price,
             'discount' => $this->discount,
             'totalPrice' => round( 1- ($this->discount/100)*$this->price),
-            'rating' => $this->Reviews->count > 0 ? round($this->Reviews->sum()/$this->Reviews->count(),2) : 'No Reviews',
+            'rating' => $this->Reviews->count() > 0 ? round($this->Reviews->sum()/$this->Reviews->count(),2) : 'No Reviews',
             'href' => [
                 'reviews' => route('reviews.index',$this->id)
             ]
