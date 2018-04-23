@@ -20,6 +20,7 @@ class ProductCollection extends ResourceCollection
             'rating' => $this->Reviews->count > 0 ? round($this->Reviews->sum()/$this->Reviews->count(),2) : 'No Reviews',
             'href' => [
                 'link' => route('products.show',$this->id)
-            ];
+            ]
+        ];
     }
 }
