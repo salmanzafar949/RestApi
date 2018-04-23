@@ -41,7 +41,7 @@ class ProductController extends Controller
         $product = Product::create($request->all());
 
         return response([
-            new ProductResoruce($product)
+            'data' => new ProductResoruce($product)
         ],Response::HTTP_CREATED);
     }
 
