@@ -3,13 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
-use App\Exceptions\ExceptionTrait;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Routing\Exception\RouteNotFoundException;
-
 class Handler extends ExceptionHandler
 {
 
